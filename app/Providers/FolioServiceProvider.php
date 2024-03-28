@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Middleware\AuthMiddleware;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Folio\Folio;
 
@@ -24,6 +25,9 @@ class FolioServiceProvider extends ServiceProvider
             '*' => [
                 //
             ],
+            // "blogs/[blog].blade.php" => [
+            //     AuthMiddleware::class
+            // ]
         ]);
     }
 }

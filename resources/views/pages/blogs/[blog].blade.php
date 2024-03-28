@@ -1,3 +1,12 @@
+<?php
+
+use function Laravel\Folio\{middleware};
+use App\Http\Middleware\AuthMiddleware;
+
+middleware(AuthMiddleware::class);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -15,9 +15,9 @@ class AuthMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (!auth()->check()) {
-            dd("you need to login");
-        }
+        // if (!auth()->check()) {
+        //     dd("you need to login");
+        // }
         return $next($request);
     }
 }

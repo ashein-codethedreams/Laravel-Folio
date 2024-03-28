@@ -7,6 +7,15 @@ middleware(AuthMiddleware::class);
 
 ?>
 
+@php
+    use Illuminate\Support\Facades\Gate;
+
+    auth()->loginUsingId(1);
+    if (Gate::denies('view', $blog)) {
+        abort(403);
+    }
+@endphp
+
 <!DOCTYPE html>
 <html lang="en">
 
